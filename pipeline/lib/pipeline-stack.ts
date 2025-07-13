@@ -30,7 +30,9 @@ export class PipelineStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: PipelineStackProps) {
     super(scope, id, props);
 
-    console.log(`Creating pipeline stack for environment: ${props}`);
+    console.log(
+      `Creating pipeline stack for environment: ${JSON.stringify(props)}`
+    );
     const { envName, infrastructureRepoName, repositoryOwner, description } =
       props;
 
