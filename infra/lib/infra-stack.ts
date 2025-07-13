@@ -16,7 +16,7 @@ export class InfraStack extends cdk.Stack {
 
     const infraBucket = new Bucket(
       this,
-      `${DEPLOY_ENVIRONMENT}-bucket-for deploy-test`,
+      `${DEPLOY_ENVIRONMENT}-bucket-for-deploy-test`,
       {
         bucketName: `${DEPLOY_ENVIRONMENT}-bucket-for-deploy test`,
         removalPolicy: cdk.RemovalPolicy.DESTROY,

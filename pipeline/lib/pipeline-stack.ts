@@ -36,7 +36,7 @@ export class PipelineStack extends cdk.Stack {
     const { envName, infrastructureRepoName, repositoryOwner, description } =
       props;
 
-    const githubToken = cdk.SecretValue.secretsManager("github-token");
+    const githubToken = cdk.SecretValue.secretsManager("github-access-token");
 
     const infrastructureDeployRole = new Role(
       this,
